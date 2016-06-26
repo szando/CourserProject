@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developing Data Products</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Developing Data Products">
+  <meta name="author" content="Sandor Boros">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Developing Data Products</h1>
+    <h2>Course Project</h2>
+    <p>Sandor Boros<br/>Student</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Insight for the layperson</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The features of this app are fairly limited. It was purpose built to enable the <strong>Citizen Data Scientist</strong> to explore some of the information available in the Nuclear dataset.
+(More about the data on the next slide.)
+The user interface provides simple means to filter the dataset based on only 3 criteria and display the overview in a barchart instantaneously.
+The app is available here:  <a href="https://sandor.shinyapps.io/CourseProject/">https://sandor.shinyapps.io/CourseProject/</a></p>
+
+<p><img src="/Users/sandor/Documents/DataScienceCourse/DataDevePresentation/DataDevePresentation/assets/img/i-have-no-idea-what-im-doing_cropped.jpg" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>The Dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The data is available in the &quot;boot&quot;&quot; R package and it was originally obtained from 
+&quot;Cox, D.R. and Snell, E.J. (1981) Applied Statistics: Principles and Examples. Chapman and Hall.&quot;
+This app uses the below columns from the dataset:</p>
+
+<ul>
+<li>cost The capital cost of construction in millions of dollars adjusted to 1976 base.</li>
+<li>date The date on which the construction permit was issued. The data are measured in years since January 1 1990 to the nearest month.</li>
+<li>t1 The time between application for and issue of the construction permit.
+A quick summary of the data:</li>
+<li>pt A binary variable where 1 indicates those plants with partial turnkey guarantees.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Dataset - ctd.</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A quick summary of the data:</p>
+
+<pre><code>##     cost  date t1 t2  cap pr ne ct bw cum.n pt
+## 1 460.05 68.58 14 46  687  0  1  0  0    14  0
+## 2 452.99 67.33 10 73 1065  0  0  1  0     1  0
+## 3 443.22 67.33 10 85 1065  1  0  1  0     1  0
+## 4 652.32 68.00 11 67 1065  0  1  1  0    12  0
+## 5 642.23 68.00 11 78 1065  1  1  1  0    12  0
+## 6 345.39 67.92 13 51  514  0  1  1  0     3  0
+</code></pre>
+
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   207.5   310.3   448.1   461.6   612.0   881.2
+</code></pre>
+
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    7.00   11.75   13.00   13.75   15.25   22.00
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Features and UI</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The user can easily change the displayed plot with three very simple controls: </p>
+
+<ul>
+<li>A slider, to limit the records to those with a delay under a specific value</li>
+<li>A drop-down box to set the date in which the construction started</li>
+<li>A checkbox to consider only those powerplants for which the builder provided a partial turnkey guarantee.</li>
+</ul>
+
+<p><img src="/Users/sandor/Documents/DataScienceCourse/DataDevePresentation/DataDevePresentation/assets/img/control_small.png" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Features and UI - ctd.</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A sample plot without any filters.
+<img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Thank you</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Even though the app is not as feature-rich  as it could be, but it can be helpful in providing a brief look into the Nuclear Power Station Contruction data for those who prefer looking at charts instead of raw data, but don&#39;t have the skills to create them.</p>
+
+<p>The image was taken from <a href="https://strongsuitblog.files.wordpress.com/2014/05/i-have-no-idea-what-im-doing.jpg">https://strongsuitblog.files.wordpress.com/2014/05/i-have-no-idea-what-im-doing.jpg</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Insight for the layperson'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The Dataset'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Dataset - ctd.'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Features and UI'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Features and UI - ctd.'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Thank you'>
+         6
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

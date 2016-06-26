@@ -9,6 +9,9 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+github:
+  user: szando
+  repo: CourserProject
 ---
 
 ## Insight for the layperson
@@ -18,7 +21,7 @@ The features of this app are fairly limited. It was purpose built to enable the 
 The user interface provides simple means to filter the dataset based on only 3 criteria and display the overview in a barchart instantaneously.
 The app is available here:  https://sandor.shinyapps.io/CourseProject/
 
-![](/Users/sandor/Documents/DataScienceCourse/DataDevePresentation/DataDevePresentation/assets/img/i-have-no-idea-what-im-doing_cropped.jpg)
+![](assets/img/i-have-no-idea-what-im-doing_cropped.jpg)
 
 ---
 

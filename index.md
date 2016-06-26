@@ -23,6 +23,8 @@ The app is available here:  https://sandor.shinyapps.io/CourseProject/
 
 ![](assets/img/i-have-no-idea-what-im-doing_cropped.jpg)
 
+Image source: https://strongsuitblog.files.wordpress.com/2014/05/i-have-no-idea-what-im-doing.jpg
+
 ---
 
 ## The Dataset
@@ -71,7 +73,7 @@ The user can easily change the displayed plot with three very simple controls:
 * A drop-down box to set the date in which the construction started
 * A checkbox to consider only those powerplants for which the builder provided a partial turnkey guarantee.
 
-![](/Users/sandor/Documents/DataScienceCourse/DataDevePresentation/DataDevePresentation/assets/img/control_small.png)
+![](assets/img/control_small.png)
 
 ---
 
@@ -79,12 +81,6 @@ The user can easily change the displayed plot with three very simple controls:
 A sample plot without any filters.
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png)
 
----
-
-## Thank you
-Even though the app is not as feature-rich  as it could be, but it can be helpful in providing a brief look into the Nuclear Power Station Contruction data for those who prefer looking at charts instead of raw data, but don't have the skills to create them.
-
-The image was taken from https://strongsuitblog.files.wordpress.com/2014/05/i-have-no-idea-what-im-doing.jpg
 
 
 

@@ -82,6 +82,13 @@ A sample plot without any filters.
 ![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png)
 
 
+---
+
+## Thank you
+Even though the app is not as feature-rich  as it could be, but it can be helpful in providing a brief look into the Nuclear Power Station Contruction data for those who prefer looking at charts instead of raw data, but don't have the skills to create them.
+
+The image was taken from https://strongsuitblog.files.wordpress.com/2014/05/i-have-no-idea-what-im-doing.jpg
+
 
 
 
